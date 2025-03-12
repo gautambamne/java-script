@@ -1,0 +1,71 @@
+<!-- event -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amazing Image</h2>
+
+    <div>
+        <ul id="image">
+            <li><img width="200px" id="photoshop" src="https://imgs.search.brave.com/PjE33tVn9FgNIvLyiXIda3Iuc-QnbB3f_cexAHHWsHU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://imgs.search.brave.com/6m3xgQN3DlbdTGDHkHgGvbXk5QyaqyaVM6NfkR1Crj0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzQxLzcxLzkz/LzM2MF9GXzc0MTcx/OTM5NF9DOUJQM1li/aVhTSjdXc3BTREx0/S2RZeFpLS1dsZjBK/ei5qcGc" alt=""></li>
+            <li><img width="200px" id="river" src="https://imgs.search.brave.com/ki4EkSSjnmgSP-htfMLwy0S6SaHvZHgGnaIFoXEnmZ4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2hvbWUvYmx1cmJz/L3Zpc3VhbHMud2Vi/cA" alt=""></li>
+            <li><img width="200px" id="owl" src="https://imgs.search.brave.com/Y2rH-Z9a2_btluX3LhROUI7M7jGi_vhClrX3FnB4yVA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/dGFubmVkLXNhbmQt/ZHVuZXMtc3Vycm91/bmRlZC1hbi1vcGVu/LXJlc2Vydm9pci5q/cGc_d2lkdGg9MTAw/MCZmb3JtYXQ9cGpw/ZyZleGlmPTAmaXB0/Yz0w" alt="" /*oneclick="alert('owl')"*/></li>
+            <li><img width="200px" id="prayer" src="https://imgs.search.brave.com/4jNLJmyJiU7u36PRgvcwzoOxSKzIj6a_vX20fcIHH0Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTEz/NDM5MzQxL3Bob3Rv/L3BvcnRyYWl0LW9m/LWVudGh1c2lhc3Rp/Yy1idXNpbmVzcy1w/ZW9wbGUtaW4tY2ly/Y2xlLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1veHdzcThX/R0ZUMGl4bVNvam50/WUJFWnFpZm5lNFA3/RGxxT1diWENxV1Vr/PQ" alt=""></li>
+            <li><a style="color: aqua;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    // attachEvent()
+    // jQuery -on
+
+    // type. timestamp, defaultPrevented
+    // target , toElement , srcElement , currentTarget
+    // clineX, clineY, screenX ,screenY
+    // altKey, ctrlkey, shiftKey ,keyCOde
+    
+
+    // document.getElementById('image').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+        
+    // },true)
+    
+    
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("owl clicked ");
+    //     e.stopPropagation()
+        
+    // },true)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("goolge clicked");
+        
+    // },false)
+
+
+    document.querySelector('#image').addEventListener('click', function (e) {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            
+        }
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt)
+        
+        
+    })
+
+</script>
+</html>
